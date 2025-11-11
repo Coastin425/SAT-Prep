@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAT Prep Pro - Your Ultimate Study Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">SAT Prep Pro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#study" class="nav-link" data-page="study">Study</a></li>
+                <li><a href="#practice" class="nav-link" data-page="practice">Practice</a></li>
+                <li><a href="#schedule" class="nav-link" data-page="schedule">Schedule</a></li>
+                <li><a href="#tips" class="nav-link" data-page="tips">Test Tips</a></li>
+                <li><a href="#progress" class="nav-link" data-page="progress">Progress</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1 class="hero-title">Welcome to SAT Prep Pro! 🚀</h1>
+                <p class="hero-subtitle">Your journey to SAT success starts here</p>
+                <div class="user-greeting">
+                    <p>Hey there, future SAT champion! 👋</p>
+                    <input type="text" id="userName" placeholder="Enter your name" class="name-input">
+                    <button id="saveNameBtn" class="btn btn-primary">Let's Go!</button>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>SAT-Specific Content</h3>
+                    <p>Master Math, Reading, and Writing with targeted lessons</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Practice Questions</h3>
+                    <p>Test your knowledge with realistic SAT questions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Study Schedule</h3>
+                    <p>Plan your prep with a personalized study timeline</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Test Strategies</h3>
+                    <p>Learn proven techniques to maximize your score</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your improvement and celebrate wins</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎉</div>
+                    <h3>Fun & Engaging</h3>
+                    <p>Learning doesn't have to be boring!</p>
+                </div>
+            </div>
+
+            <div class="fun-fact-box">
+                <h3>🤓 Fun SAT Fact of the Day</h3>
+                <p id="dailyFact"></p>
+            </div>
+        </section>
+
+        <!-- Study Page -->
+        <section id="study" class="page">
+            <h1 class="page-title">Study Materials 📖</h1>
+            
+            <div class="study-sections">
+                <div class="study-card" data-subject="math">
+                    <div class="study-card-header">
+                        <h2>🔢 SAT Math</h2>
+                        <span class="progress-badge">Progress: <span id="mathProgress">0</span>%</span>
+                    </div>
+                    <div class="study-card-content">
+                        <h3>Key Topics:</h3>
+                        <ul class="topic-list">
+                            <li class="topic-item" data-topic="algebra">
+                                <input type="checkbox" id="algebra" class="topic-checkbox">
+                                <label for="algebra">Heart of Algebra - Linear equations, systems, inequalities</label>
+                            </li>
+                            <li class="topic-item" data-topic="problem-solving">
+                                <input type="checkbox" id="problem-solving" class="topic-checkbox">
+                                <label for="problem-solving">Problem Solving & Data Analysis - Ratios, percentages, statistics</label>
+                            </li>
+                            <li class="topic-item" data-topic="passport">
+                                <input type="checkbox" id="passport" class="topic-checkbox">
+                                <label for="passport">Passport to Advanced Math - Quadratics, exponentials, polynomials</label>
+                            </li>
+                            <li class="topic-item" data-topic="geometry">
+                                <input type="checkbox" id="geometry" class="topic-checkbox">
+                                <label for="geometry">Additional Topics - Geometry, trigonometry, complex numbers</label>
+                            </li>
+                        </ul>
+                        <div class="study-tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <p>• Calculator is allowed on some sections - know when to use it!</p>
+                            <p>• Plug in answer choices for multiple choice questions</p>
+                            <p>• Draw diagrams for geometry problems (even if not provided)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="study-card" data-subject="reading">
+                    <div class="study-card-header">
+                        <h2>📚 SAT Reading</h2>
+                        <span class="progress-badge">Progress: <span id="readingProgress">0</span>%</span>
+                    </div>
+                    <div class="study-card-content">
+                        <h3>Key Topics:</h3>
+                        <ul class="topic-list">
+                            <li class="topic-item">
+                                <input type="checkbox" id="main-ideas" class="topic-checkbox">
+                                <label for="main-ideas">Main Ideas & Themes - Understanding central messages</label>
+                            </li>
+                            <li class="topic-item">
+                                <input type="checkbox" id="evidence" class="topic-checkbox">
+                                <label for="evidence">Command of Evidence - Finding textual support</label>
+                            </li>
+                            <li class="topic-item">
+                                <input type="checkbox" id="vocabulary" class="topic-checkbox">
+                                <label for="vocabulary">Words in Context - Vocabulary and meaning</label>
+                            </li>
+                            <li class="topic-item">
+                                <input type="checkbox" id="analysis" class="topic-checkbox">
+                                <label for="analysis">Analysis - Author's craft, structure, purpose</label>
+                            </li>
+                        </ul>
+                        <div class="study-tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <p>• Always find evidence in the passage - don't rely on memory!</p>
+                            <p>• Read the questions before the passage to know what to look for</p>
+                            <p>• Eliminate obviously wrong answers first</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="study-card" data-subject="writing">
+                    <div class="study-card-header">
+                        <h2>✍️ SAT Writing & Language</h2>
+                        <span class="progress-badge">Progress: <span id="writingProgress">0</span>%</span>
+                    </div>
+                    <div class="study-card-content">
+                        <h3>Key Topics:</h3>
+                        <ul class="topic-list">
+                            <li class="topic-item">
+                                <input type="checkbox" id="grammar" class="topic-checkbox">
+                                <label for="grammar">Standard English Conventions - Grammar, punctuation, usage</label>
+                            </li>
+                            <li class="topic-item">
+                                <input type="checkbox" id="expression" class="topic-checkbox">
+                                <label for="expression">Expression of Ideas - Organization, style, effectiveness</label>
+                            </li>
+                            <li class="topic-item">
+                                <input type="checkbox" id="sentences" class="topic-checkbox">
+                                <label for="sentences">Sentence Structure - Fragments, run-ons, modifiers</label>
+                            </li>
+                            <li class="topic-item">
+                                <input type="checkbox" id="punctuation" class="topic-checkbox">
+                                <label for="punctuation">Punctuation - Commas, semicolons, colons, dashes</label>
+                            </li>
+                        </ul>
+                        <div class="study-tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <p>• When in doubt, choose the most concise answer</p>
+                            <p>• Read the sentence with your answer plugged in - trust your ear!</p>
+                            <p>• "NO CHANGE" is right about 25% of the time - don't fear it</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fun-fact-box">
+                <h3>🧩 Did You Know?</h3>
+                <p>The SAT was first administered in 1926 and has gone through many changes. Fun fact: there used to be an "antonym" section that was removed in 2005 because it was deemed less useful for predicting college success!</p>
+            </div>
+        </section>
+
+        <!-- Practice Page -->
+        <section id="practice" class="page">
+            <h1 class="page-title">Practice Questions 🎯</h1>
+            
+            <div class="practice-selector">
+                <button class="btn btn-primary practice-btn" data-subject="math">Math Practice</button>
+                <button class="btn btn-primary practice-btn" data-subject="reading">Reading Practice</button>
+                <button class="btn btn-primary practice-btn" data-subject="writing">Writing Practice</button>
+            </div>
+
+            <div id="practiceQuiz" class="quiz-container hidden">
+                <div class="quiz-header">
+                    <h2 id="quizTitle"></h2>
+                    <div class="quiz-stats">
+                        <span>Question <span id="currentQuestion">1</span> of <span id="totalQuestions">5</span></span>
+                        <span>Score: <span id="quizScore">0</span></span>
+                    </div>
+                </div>
+                
+                <div id="questionContainer" class="question-container">
+                    <p class="question-text" id="questionText"></p>
+                    <div id="answerOptions" class="answer-options"></div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="submitAnswer" class="btn btn-primary">Submit Answer</button>
+                    <button id="nextQuestion" class="btn btn-secondary hidden">Next Question</button>
+                </div>
+
+                <div id="feedback" class="feedback hidden"></div>
+            </div>
+
+            <div class="stats-section">
+                <h3>Your Practice Stats 📊</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalAnswered">0</div>
+                        <div class="stat-label">Questions Answered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalCorrect">0</div>
+                        <div class="stat-label">Correct Answers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="accuracyRate">0%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Page -->
+        <section id="schedule" class="page">
+            <h1 class="page-title">Study Schedule 📅</h1>
+            
+            <div class="schedule-setup">
+                <h2>Create Your Personalized Study Plan</h2>
+                <div class="form-group">
+                    <label for="testDate">When is your SAT test?</label>
+                    <input type="date" id="testDate" class="input-field">
+                </div>
+                <div class="form-group">
+                    <label for="studyHours">How many hours can you study per week?</label>
+                    <select id="studyHours" class="input-field">
+                        <option value="5">5 hours</option>
+                        <option value="10" selected>10 hours</option>
+                        <option value="15">15 hours</option>
+                        <option value="20">20 hours</option>
+                    </select>
+                </div>
+                <button id="generateSchedule" class="btn btn-primary">Generate Schedule</button>
+            </div>
+
+            <div id="scheduleDisplay" class="schedule-display hidden">
+                <h3>Your Study Schedule 🎯</h3>
+                <div id="scheduleContent"></div>
+                
+                <div class="schedule-tips">
+                    <h4>⏰ Scheduling Pro Tips:</h4>
+                    <ul>
+                        <li><strong>Consistency beats cramming:</strong> Study a little each day rather than marathon sessions</li>
+                        <li><strong>Peak performance times:</strong> Study difficult subjects when you're most alert</li>
+                        <li><strong>Take breaks:</strong> Use the Pomodoro technique (25 min study, 5 min break)</li>
+                        <li><strong>Mix it up:</strong> Alternate between subjects to keep things interesting</li>
+                        <li><strong>Review regularly:</strong> Spaced repetition is your secret weapon</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fun-fact-box">
+                <h3>⏱️ Time Management Humor</h3>
+                <p>Why did the student bring a ladder to the SAT? Because they wanted to reach their highest score! 😄 But seriously, good time management is like having a superpower on test day!</p>
+            </div>
+        </section>
+
+        <!-- Test Tips Page -->
+        <section id="tips" class="page">
+            <h1 class="page-title">Test-Taking Strategies 🧠</h1>
+            
+            <div class="tips-container">
+                <div class="tip-category">
+                    <h2>🎯 Before Test Day</h2>
+                    <div class="tip-card">
+                        <h3>The Night Before</h3>
+                        <ul>
+                            <li>Get 8+ hours of sleep (seriously, don't pull an all-nighter!)</li>
+                            <li>Prepare your materials: admission ticket, ID, pencils, calculator, snacks</li>
+                            <li>Lay out comfortable clothes (dress in layers)</li>
+                            <li>Set multiple alarms (don't trust just one!)</li>
+                            <li>Watch a funny movie or do something relaxing</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Morning Routine</h3>
+                        <ul>
+                            <li>Eat a good breakfast with protein and complex carbs</li>
+                            <li>Avoid excessive caffeine (you don't want jitters!)</li>
+                            <li>Arrive 15-20 minutes early</li>
+                            <li>Do some light stretching or breathing exercises</li>
+                            <li>Listen to your pump-up playlist on the way</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip-category">
+                    <h2>⚡ During the Test</h2>
+                    <div class="tip-card">
+                        <h3>Time Management Strategy</h3>
+                        <ul>
+                            <li><strong>Reading Section (65 min):</strong> ~13 minutes per passage, 52 questions total</li>
+                            <li><strong>Writing Section (35 min):</strong> ~8-9 minutes per passage, 44 questions total</li>
+                            <li><strong>Math No Calculator (25 min):</strong> ~1.25 minutes per question, 20 questions</li>
+                            <li><strong>Math With Calculator (55 min):</strong> ~1.5 minutes per question, 38 questions</li>
+                            <li><strong>Pro tip:</strong> Wear a watch! Don't rely on the proctor's clock</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Question Strategy</h3>
+                        <ul>
+                            <li><strong>Skip and return:</strong> If stuck, mark it and move on (you can always come back!)</li>
+                            <li><strong>Process of elimination:</strong> Cross out wrong answers in your test booklet</li>
+                            <li><strong>Guess intelligently:</strong> No penalty for guessing - never leave blanks!</li>
+                            <li><strong>Trust your first instinct:</strong> Don't second-guess unless you find a clear error</li>
+                            <li><strong>Read carefully:</strong> Watch for "EXCEPT," "NOT," and other tricky words</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip-category">
+                    <h2>🧘 Staying Focused</h2>
+                    <div class="tip-card">
+                        <h3>Mental Strategies</h3>
+                        <ul>
+                            <li><strong>Breathing technique:</strong> If anxious, do 4-7-8 breathing (inhale 4 sec, hold 7 sec, exhale 8 sec)</li>
+                            <li><strong>Positive self-talk:</strong> Replace "I can't" with "I'm doing my best"</li>
+                            <li><strong>One question at a time:</strong> Don't think about the whole test, focus on what's in front of you</li>
+                            <li><strong>Physical reset:</strong> Stretch your neck, roll shoulders, wiggle toes when feeling tense</li>
+                            <li><strong>Visualization:</strong> Imagine yourself succeeding and feeling confident</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h3>During Breaks</h3>
+                        <ul>
+                            <li>Use the restroom even if you don't think you need to</li>
+                            <li>Eat a light snack (nuts, granola bar, fruit)</li>
+                            <li>Drink water but don't overdo it</li>
+                            <li>Do some quick stretches or walk around</li>
+                            <li>Avoid talking about test questions with others (it'll just stress you out!)</li>
+                            <li>Take deep breaths and reset your mindset</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip-category">
+                    <h2>🎪 The Secret Weapons</h2>
+                    <div class="tip-card">
+                        <h3>Little-Known Test Hacks</h3>
+                        <ul>
+                            <li><strong>The "Letter of the Day":</strong> If you have to guess randomly, pick one letter and stick with it (statistically better than random guessing)</li>
+                            <li><strong>Bubble in patterns:</strong> Don't waste time looking back and forth - do a whole page at once</li>
+                            <li><strong>Use your test booklet:</strong> Circle, underline, draw, eliminate - it's YOUR workspace!</li>
+                            <li><strong>Math backstop:</strong> Always estimate first to catch silly mistakes</li>
+                            <li><strong>Reading efficiency:</strong> Read the blurb before each passage - it gives context!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="motivational-box">
+                <h2>💪 You've Got This!</h2>
+                <p class="motivational-text">
+                    Remember: The SAT is just one number. It doesn't define your intelligence, worth, or future success. 
+                    You're preparing, you're learning, and you're growing. That's what matters most! 🌟
+                </p>
+                <p class="motivational-text">
+                    <strong>Pro tip from test veterans:</strong> The students who do best aren't necessarily the smartest - 
+                    they're the ones who stay calm, manage their time well, and trust their preparation. You're doing all of that! 🎯
+                </p>
+            </div>
+
+            <div class="fun-fact-box">
+                <h3>😄 Test Day Humor</h3>
+                <p>What did the SAT say to the student? "You can't spell 'Saturday' without SAT!" Okay, that's terrible, but hopefully it made you smile. Remember: a little humor can ease those test day nerves!</p>
+            </div>
+        </section>
+
+        <!-- Progress Page -->
+        <section id="progress" class="page">
+            <h1 class="page-title">Your Progress 📊</h1>
+            
+            <div class="progress-overview">
+                <div class="welcome-message">
+                    <h2>Hey <span id="userNameDisplay">Champion</span>! 👋</h2>
+                    <p>Here's how you're crushing it:</p>
+                </div>
+
+                <div class="progress-stats">
+                    <div class="progress-card">
+                        <h3>Study Topics Completed</h3>
+                        <div class="progress-circle">
+                            <div class="circle-value" id="topicsCompleted">0/12</div>
+                        </div>
+                    </div>
+                    <div class="progress-card">
+                        <h3>Practice Questions</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="questionsProgressBar"></div>
+                        </div>
+                        <p class="progress-text"><span id="questionsCount">0</span> questions answered</p>
+                    </div>
+                    <div class="progress-card">
+                        <h3>Overall Accuracy</h3>
+                        <div class="accuracy-display">
+                            <span class="accuracy-value" id="overallAccuracy">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subject-progress">
+                    <h3>Progress by Subject</h3>
+                    <div class="subject-bars">
+                        <div class="subject-bar-item">
+                            <label>Math 🔢</label>
+                            <div class="bar-background">
+                                <div class="bar-fill" id="mathBar" style="width: 0%"></div>
+                            </div>
+                            <span id="mathPercent">0%</span>
+                        </div>
+                        <div class="subject-bar-item">
+                            <label>Reading 📚</label>
+                            <div class="bar-background">
+                                <div class="bar-fill" id="readingBar" style="width: 0%"></div>
+                            </div>
+                            <span id="readingPercent">0%</span>
+                        </div>
+                        <div class="subject-bar-item">
+                            <label>Writing ✍️</label>
+                            <div class="bar-background">
+                                <div class="bar-fill" id="writingBar" style="width: 0%"></div>
+                            </div>
+                            <span id="writingPercent">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements">
+                    <h3>Achievements Unlocked 🏆</h3>
+                    <div id="achievementsList" class="achievements-grid"></div>
+                </div>
+
+                <div class="motivational-box">
+                    <h3>Keep Going! 💪</h3>
+                    <p id="motivationalMessage"></p>
+                </div>
+            </div>
+
+            <div class="reset-section">
+                <button id="resetProgress" class="btn btn-danger">Reset All Progress</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>SAT Prep Pro - Your journey to success! 🚀</p>
+        <p class="footer-note">Remember: This is a study tool. Always verify with official SAT resources!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
